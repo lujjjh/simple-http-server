@@ -1,1 +1,10 @@
-.xcodeproj
+.xcodeproj/
+.vs/
+
+*.sdf
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+Debug/
+simple-http-server/x64/

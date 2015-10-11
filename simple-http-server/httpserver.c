@@ -90,7 +90,7 @@ static void _write_cb(uv_write_t *req, int status) {
 
 uv_buf_t res_buf = {
     .base = "HTTP/1.1 200 OK\r\nContent-Length: 12\r\nConnection: close\r\n\r\nHello world!",
-    .len = strlen("HTTP/1.1 200 OK\r\nContent-Length: 12\r\nConnection: close\r\n\r\nHello world!")
+    .len = 70
 };
 
 static void _read_cb(uv_stream_t *stream, ssize_t nread, const uv_buf_t *buf) {
