@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		362BBC231BC9587F0083570D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 362BBC221BC9587F0083570D /* main.c */; };
+		36EFAF621BC961E90007E044 /* httpserver.c in Sources */ = {isa = PBXBuildFile; fileRef = 36EFAF601BC961E90007E044 /* httpserver.c */; settings = {ASSET_TAGS = (); }; };
+		36EFAF681BC97E6A0007E044 /* httprequest_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 36EFAF661BC97E6A0007E044 /* httprequest_parser.c */; settings = {ASSET_TAGS = (); }; };
+		36EFAF6B1BC9E9C70007E044 /* httprequest_header_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 36EFAF691BC9E9C70007E044 /* httprequest_header_parser.c */; settings = {ASSET_TAGS = (); }; };
+		36EFAF6E1BC9EDD40007E044 /* httprequest_header_pair.c in Sources */ = {isa = PBXBuildFile; fileRef = 36EFAF6C1BC9EDD40007E044 /* httprequest_header_pair.c */; settings = {ASSET_TAGS = (); }; };
+		36EFAF711BC9EE010007E044 /* httprequest_header_pair_collection.c in Sources */ = {isa = PBXBuildFile; fileRef = 36EFAF6F1BC9EE010007E044 /* httprequest_header_pair_collection.c */; settings = {ASSET_TAGS = (); }; };
+		36EFAF771BCA104E0007E044 /* httprequest.c in Sources */ = {isa = PBXBuildFile; fileRef = 36EFAF751BCA104E0007E044 /* httprequest.c */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,18 @@
 /* Begin PBXFileReference section */
 		362BBC1F1BC9587F0083570D /* simple-http-server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "simple-http-server"; sourceTree = BUILT_PRODUCTS_DIR; };
 		362BBC221BC9587F0083570D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		36EFAF601BC961E90007E044 /* httpserver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = httpserver.c; sourceTree = "<group>"; };
+		36EFAF611BC961E90007E044 /* httpserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpserver.h; sourceTree = "<group>"; };
+		36EFAF661BC97E6A0007E044 /* httprequest_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = httprequest_parser.c; sourceTree = "<group>"; };
+		36EFAF671BC97E6A0007E044 /* httprequest_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httprequest_parser.h; sourceTree = "<group>"; };
+		36EFAF691BC9E9C70007E044 /* httprequest_header_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = httprequest_header_parser.c; sourceTree = "<group>"; };
+		36EFAF6A1BC9E9C70007E044 /* httprequest_header_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httprequest_header_parser.h; sourceTree = "<group>"; };
+		36EFAF6C1BC9EDD40007E044 /* httprequest_header_pair.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = httprequest_header_pair.c; sourceTree = "<group>"; };
+		36EFAF6D1BC9EDD40007E044 /* httprequest_header_pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httprequest_header_pair.h; sourceTree = "<group>"; };
+		36EFAF6F1BC9EE010007E044 /* httprequest_header_pair_collection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = httprequest_header_pair_collection.c; sourceTree = "<group>"; };
+		36EFAF701BC9EE010007E044 /* httprequest_header_pair_collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httprequest_header_pair_collection.h; sourceTree = "<group>"; };
+		36EFAF751BCA104E0007E044 /* httprequest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = httprequest.c; sourceTree = "<group>"; };
+		36EFAF761BCA104E0007E044 /* httprequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httprequest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				362BBC221BC9587F0083570D /* main.c */,
+				36EFAF601BC961E90007E044 /* httpserver.c */,
+				36EFAF611BC961E90007E044 /* httpserver.h */,
+				36EFAF751BCA104E0007E044 /* httprequest.c */,
+				36EFAF761BCA104E0007E044 /* httprequest.h */,
+				36EFAF661BC97E6A0007E044 /* httprequest_parser.c */,
+				36EFAF671BC97E6A0007E044 /* httprequest_parser.h */,
+				36EFAF691BC9E9C70007E044 /* httprequest_header_parser.c */,
+				36EFAF6A1BC9E9C70007E044 /* httprequest_header_parser.h */,
+				36EFAF6C1BC9EDD40007E044 /* httprequest_header_pair.c */,
+				36EFAF6D1BC9EDD40007E044 /* httprequest_header_pair.h */,
+				36EFAF6F1BC9EE010007E044 /* httprequest_header_pair_collection.c */,
+				36EFAF701BC9EE010007E044 /* httprequest_header_pair_collection.h */,
 			);
 			path = "simple-http-server";
 			sourceTree = "<group>";
@@ -118,6 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36EFAF681BC97E6A0007E044 /* httprequest_parser.c in Sources */,
+				36EFAF6B1BC9E9C70007E044 /* httprequest_header_parser.c in Sources */,
+				36EFAF6E1BC9EDD40007E044 /* httprequest_header_pair.c in Sources */,
+				36EFAF621BC961E90007E044 /* httpserver.c in Sources */,
+				36EFAF771BCA104E0007E044 /* httprequest.c in Sources */,
+				36EFAF711BC9EE010007E044 /* httprequest_header_pair_collection.c in Sources */,
 				362BBC231BC9587F0083570D /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +241,11 @@
 		362BBC271BC9587F0083570D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/libuv/1.7.4/include;
+				OTHER_LDFLAGS = (
+					"-luv",
+					"-L/usr/local/Cellar/libuv/1.7.4/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +253,11 @@
 		362BBC281BC9587F0083570D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/libuv/1.7.4/include;
+				OTHER_LDFLAGS = (
+					"-luv",
+					"-L/usr/local/Cellar/libuv/1.7.4/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +281,7 @@
 				362BBC281BC9587F0083570D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
