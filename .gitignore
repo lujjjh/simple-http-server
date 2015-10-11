@@ -1,10 +1,13 @@
 *.xcodeproj/
 .vs/
 
+*.opensdf
 *.sdf
 *.sln
 *.vcxproj
 *.vcxproj.filters
+*.vcxproj.user
 
 Debug/
+Release/
 simple-http-server/x64/

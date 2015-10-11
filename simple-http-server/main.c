@@ -3,8 +3,8 @@
 //  simple-http-server
 //
 
+#include <direct.h>
 #include <stdio.h>
-#include <unistd.h>
 #include "httpserver.h"
 
 int main(int argc, const char * argv[]) {
@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
     }
     
     char wwwroot[1024];
-    getcwd(wwwroot, sizeof wwwroot);
+    _getcwd(wwwroot, sizeof wwwroot);
     strcat(wwwroot, "/public");
     printf("Set wwwroot to %s\n", wwwroot);
     if (httpserver_listen(&server, wwwroot) != 0) {

@@ -20,7 +20,8 @@
     do {                                                                \
         int __RESULT__ = (expr);                                        \
         if (__RESULT__ != 0) {                                          \
-            fprintf(stderr, "Error: %s\n",                              \
+            fprintf(stderr, "Error: %s: %s\n",                          \
+					(description),                                      \
                     uv_strerror(__RESULT__));                           \
             return;                                                     \
         }                                                               \
@@ -183,27 +184,30 @@ static void _fs_stat_cb(uv_fs_t *req) {
         fprintf(stderr, "Error: in _file_read_cb(): %s\n", uv_strerror((int)req->result));
         uv_fs_req_cleanup(req);
         free(req);
-        return _send_404(request);
+        _send_404(request);
+		return;
     }
     
-    if (S_ISDIR(req->statbuf.st_mode)) {
+    if (req->statbuf.st_size <= 0) {
         uv_fs_req_cleanup(req);
         free(req);
-        return _send_404(request);
+        _send_404(request);
+		return;
     }
     
     uv_fs_t *fs_req = (uv_fs_t *)malloc(sizeof(uv_fs_t));
     int fd = uv_fs_open(request->server->loop,
                         fs_req,
                         req->path,
-                        O_RDONLY,
+                        0,
                         0644,
                         NULL);
     
     if (fd < 0) {
         uv_fs_req_cleanup(req);
         free(req);
-        return _send_404(request);
+        _send_404(request);
+		return;
     }
     
     _send_file_req_t *send_file_req = (_send_file_req_t *)malloc(sizeof(_send_file_req_t));
