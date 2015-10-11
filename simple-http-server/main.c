@@ -4,6 +4,7 @@
 //
 
 #include <stdio.h>
+#include <unistd.h>
 #include "httpserver.h"
 
 int main(int argc, const char * argv[]) {
@@ -17,13 +18,17 @@ int main(int argc, const char * argv[]) {
         exit(1);
     }
     
-    if (httpserver_listen(&server, "/Users/ljh/") != 0) {
+    char wwwroot[1024];
+    getcwd(wwwroot, sizeof wwwroot);
+    strcat(wwwroot, "/public");
+    printf("Set wwwroot to %s\n", wwwroot);
+    if (httpserver_listen(&server, wwwroot) != 0) {
         fprintf(stderr, "Error: in httpserver_listen(): %s\n",
                 httpserver_lasterror(&server));
         exit(1);
     }
     
-    puts("Server started at 0.0.0.0:8080");
+    puts("Server listening at 0.0.0.0:8080");
     
     httpserver_loop(&server);
     
